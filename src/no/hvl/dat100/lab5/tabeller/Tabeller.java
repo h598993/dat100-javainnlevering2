@@ -5,7 +5,6 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
 		System.out.println("*********************************************************");
 		System.out.print("[ ");
 		for (int heltall : tabell) {
@@ -22,7 +21,6 @@ public class Tabeller {
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		// TODO
 		String nyStreng = "[";
 		if (tabell.length >= 1) {
 
@@ -43,7 +41,6 @@ public class Tabeller {
 	// c)
 	public static int summer(int[] tabell) {
 
-		// TODO
 		int sum = 0;
 		for (int tall : tabell) {
 			sum += tall;
@@ -54,7 +51,6 @@ public class Tabeller {
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
 		boolean funnet = false;
 		int i = 0;
 		while (!funnet && i < tabell.length) {
@@ -71,7 +67,6 @@ public class Tabeller {
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 
-		// TODO
 		int returVerdi = -1;
 
 		for (int i = 0; i < tabell.length; i++) {
