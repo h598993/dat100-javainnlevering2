@@ -4,10 +4,18 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-		// test
-		int x = 5;
+
 		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		System.out.println("*********************************************************");
+		System.out.print("[ ");
+		for (int heltall : tabell) {
+
+			System.out.print(heltall + " ");
+
+		}
+		System.out.println("]");
+		System.out.println();
+		System.out.println("*********************************************************");
 
 	}
 
@@ -15,29 +23,64 @@ public class Tabeller {
 	public static String tilStreng(int[] tabell) {
 
 		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
+		String nyStreng = "[";
+		if (tabell.length >= 1) {
+
+			for (int i = 0; i < tabell.length - 1; i++) {
+				nyStreng = nyStreng + tabell[i] + ",";
+			}
+			nyStreng = nyStreng + tabell[tabell.length - 1];
+			nyStreng = nyStreng + "]";
+
+			return nyStreng;
+		} else {
+			nyStreng = "[]";
+			return nyStreng;
+		}
+
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
 
 		// TODO
-		throw new UnsupportedOperationException("summer ikke implementert");
+		int sum = 0;
+		for (int tall : tabell) {
+			sum += tall;
+		}
+		return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
 		// TODO
-		throw new UnsupportedOperationException("finnesTall ikke implementert");
+		boolean funnet = false;
+		int i = 0;
+		while (!funnet && i < tabell.length) {
+			if (tabell[i] == tall) {
+				funnet = true;
+			}
+			i++;
+		}
+
+		return funnet;
+
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 
 		// TODO
-		throw new UnsupportedOperationException("posisjonTall ikke implementert");
+		int returVerdi = -1;
+
+		for (int i = 0; i < tabell.length; i++) {
+			if (tabell[i] == tall) {
+				returVerdi = i;
+				break;
+			}
+		}
+		return returVerdi;
 
 	}
 
@@ -46,7 +89,7 @@ public class Tabeller {
 
 		// TODO
 		throw new UnsupportedOperationException("reverser ikke implementert");
-		
+
 	}
 
 	// g)
